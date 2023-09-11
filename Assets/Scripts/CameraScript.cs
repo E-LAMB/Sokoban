@@ -33,19 +33,23 @@ public class CameraScript : MonoBehaviour
             Debug.Log("run");
             if (direction == "up")
             {
-                camera_position += new Vector3 (0f, 8f, 0f);
+                camera_position += new Vector3 (0f, 9f, 0f);
+                player.ForceMovement(new Vector3(0f, 1f, 0f));
             }
             if (direction == "down")
             {
-                camera_position += new Vector3 (0f, -8f, 0f);
+                camera_position += new Vector3 (0f, -9f, 0f);
+                player.ForceMovement(new Vector3(0f, -1f, 0f));
             }
             if (direction == "left")
             {
-                camera_position += new Vector3 (-8f, 0f, 0f);
+                camera_position += new Vector3 (-9f, 0f, 0f);
+                player.ForceMovement(new Vector3(-1f, 0f, 0f));
             }
             if (direction == "right")
             {
-                camera_position += new Vector3 (8f, 0f, 0f);
+                camera_position += new Vector3 (9f, 0f, 0f);
+                player.ForceMovement(new Vector3(1f, 0f, 0f));
             }
 
         }

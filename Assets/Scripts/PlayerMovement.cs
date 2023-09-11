@@ -29,6 +29,13 @@ public class PlayerMovement : MonoBehaviour
         ideal_position = self_trans.position;
     }
 
+    public void ForceMovement(Vector3 change)
+    {
+        ideal_position += change;
+        Mind.player_cooldown = 5;
+        can_move = false;
+    }
+
     bool PerformMovementCheck(bool valid_attack, Vector3 check_position)
     {
         bool final_state = true;
